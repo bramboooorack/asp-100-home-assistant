@@ -1,0 +1,13 @@
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+
+# --- IDE / editor ---
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# --- agent working notes (references local decompile; not for release) ---
+CLAUDE.md

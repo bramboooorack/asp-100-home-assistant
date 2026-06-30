@@ -1,0 +1,12 @@
+{
+  "domain": "asp100",
+  "name": "Ballu ASP-100 Breezer (Syncleo local)",
+  "version": "0.1.0",
+  "documentation": "github.com/opensolutionshobby/asp-100-home-assistant",
+  "issue_tracker": "github.com/opensolutionshobby/asp-100-home-assistant",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["zeroconf"],
+  "requirements": ["cryptography>=41.0"],
+  "iot_class": "local_polling"
+}

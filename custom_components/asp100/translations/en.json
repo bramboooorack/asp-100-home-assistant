@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add ASP-100 breezer",
+        "description": "Enter the breezer's MAC address and the pairing token captured during onboarding. The device must already be on your Wi-Fi.",
+        "data": {
+          "mac": "MAC address (e.g. c4:d8:d5:90:0c:80)",
+          "token": "Device token (32 hex chars)",
+          "host": "IP address (optional, leave blank for auto-discovery)"
+        }
+      }
+    },
+    "error": {
+      "invalid_token": "Token must be hexadecimal (16 bytes / 32 hex chars).",
+      "cannot_connect": "Could not find or reach the device on the network.",
+      "auth_failed": "The device rejected this token. Re-pair to get a fresh token.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "current_temperature": { "name": "Current temperature" },
+      "current_humidity": { "name": "Humidity" },
+      "co2": { "name": "CO2" },
+      "pm25": { "name": "PM2.5" },
+      "filter": { "name": "Filter life" }
+    },
+    "binary_sensor": {
+      "error": { "name": "Fault" }
+    },
+    "switch": {
+      "child_lock": { "name": "Child lock" },
+      "ionization": { "name": "Ionization" },
+      "night": { "name": "Night mode" }
+    }
+  }
+}
