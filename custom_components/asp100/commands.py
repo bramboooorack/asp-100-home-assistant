@@ -22,6 +22,7 @@ CMD_CURRENT_TEMPERATURE = 0x14
 CMD_CURRENT_CO2 = 0x16
 CMD_IONIZATION = 0x18
 CMD_TOTAL_TIME = 0x1A
+CMD_BACKLIGHT = 0x1C
 CMD_CHILD_LOCK = 0x1E
 CMD_CURRENT_PM2 = 0x20
 CMD_EXPENDABLES = 0x22  # filter life %
@@ -65,17 +66,20 @@ DECODERS: dict[int, tuple[str, callable]] = {
     CMD_MODE: ("mode", _u8),
     CMD_TARGET_TEMPERATURE: ("target_temperature", decode_temp),
     CMD_ERROR: ("error", _u8),
+    CMD_VOLUME: ("volume", _u8),
     CMD_SPEED: ("speed", _u8),
     CMD_TARGET_HUMIDITY: ("target_humidity", _u8),
     CMD_CURRENT_HUMIDITY: ("current_humidity", _u8),
     CMD_CURRENT_TEMPERATURE: ("current_temperature", decode_temp),
     CMD_CURRENT_CO2: ("co2", _u16le),
     CMD_IONIZATION: ("ionization", _bool),
+    CMD_BACKLIGHT: ("backlight", _bool),
     CMD_CHILD_LOCK: ("child_lock", _bool),
     CMD_CURRENT_PM2: ("pm25", _u16le),
     CMD_EXPENDABLES: ("filter", _u8),
     CMD_DAMPER: ("damper", _u8),
     CMD_NIGHT: ("night", _bool),
+    CMD_VOLUME: ("volume", _u8),
 }
 
 
