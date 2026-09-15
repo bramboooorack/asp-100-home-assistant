@@ -10,9 +10,11 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .commands import (
+    CMD_BACKLIGHT,
     CMD_CHILD_LOCK,
     CMD_IONIZATION,
     CMD_NIGHT,
+    CMD_VOLUME,
 )
 from .const import DOMAIN
 from .entity import Asp100Entity
@@ -28,6 +30,8 @@ SWITCHES: tuple[Asp100SwitchDescription, ...] = (
     Asp100SwitchDescription(key="child_lock", value_key="child_lock", opcode=CMD_CHILD_LOCK, translation_key="child_lock", icon="mdi:lock"),
     Asp100SwitchDescription(key="ionization", value_key="ionization", opcode=CMD_IONIZATION, translation_key="ionization", icon="mdi:atom"),
     Asp100SwitchDescription(key="night", value_key="night", opcode=CMD_NIGHT, translation_key="night", icon="mdi:weather-night"),
+    Asp100SwitchDescription(key="backlight", value_key="backlight", opcode=CMD_BACKLIGHT, translation_key="backlight", icon="mdi:lightbulb-outline",),
+    Asp100SwitchDescription(key="button_sound", value_key="volume", opcode=CMD_VOLUME, translation_key="button_sound", icon="mdi:volume-high",),
 )
 
 
